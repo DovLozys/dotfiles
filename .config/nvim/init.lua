@@ -1,3 +1,4 @@
+vim.opt.termguicolors = true
 vim.opt.listchars = { tab = [[▸\ ]], eol = '¬', space = '.' }
 vim.g.mapleader = " "
 
@@ -19,7 +20,15 @@ local lazy_plugins = {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
-	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
+	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+		}
+	}
 }
 
 local lazy_options = {
@@ -47,6 +56,7 @@ require("lazy").setup(lazy_plugins, lazy_options)
 local tele_builtin = require("telescope.builtin")
 vim.keymap.set('n', '<C-p>', tele_builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', tele_builtin.live_grep, {})
+vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
 
 local ts_config = require("nvim-treesitter.configs")
 ts_config.setup({
