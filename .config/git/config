@@ -1,0 +1,13 @@
+[user]
+	name = Dovydas Lozys
+	email = 755086+DovLozys@users.noreply.github.com
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+	[ssh]
+		allowedSignersFile = ~/.ssh/allowed_signers
+[init]
+	defaultBranch = main
+[include]
+	path = local
