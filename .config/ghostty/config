@@ -14,3 +14,6 @@ window-padding-y = 4
 # Stop mouse wheel from scrolling 3x in tmux/TUIs (discrete default is 3).
 # Trackpad (precision) left at its default of 1.
 mouse-scroll-multiplier = discrete:1
+
+# Optional per-machine overrides (untracked). E.g. font-size for HiDPI/text-scaling.
+config-file = ?config.local
