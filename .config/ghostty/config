@@ -1,1 +1,16 @@
+font-feature = "-calt, -liga, -dlig"
+
+keybind = shift+enter=text:\x1b\r
+
+font-family = DejaVu Sans Mono
+font-size = 14
+
 theme = Catppuccin Mocha
+
+window-decoration = none
+window-padding-x = 4
+window-padding-y = 4
+
+# Stop mouse wheel from scrolling 3x in tmux/TUIs (discrete default is 3).
+# Trackpad (precision) left at its default of 1.
+mouse-scroll-multiplier = discrete:1
