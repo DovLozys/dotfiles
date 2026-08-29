@@ -18,3 +18,11 @@ interfaces, the firmware `intel-rapl-mmio` one wins if lower), `sweep.sh EPP:PL1
 (3-min all-core load per candidate), `gametest.sh` (EPP/PL A/B while a game runs).
 Do not set msi-ec `shift_mode=comfort`: with the dGPU active the EC clamps the CPU to
 30 W via the MMIO limit. Default (`sport`, reads as `unknown (192)`) is fine; reboot clears it.
+
+## Fan
+
+Single fan, max 5647 RPM; the stock `auto` curve already reaches ~5100 RPM (~90 %) in game, so a
+custom curve (raw EC writes, unverified registers on this firmware) is not worth it. For long
+gaming sessions, cooler boost forces full speed (loud, safe, resets on reboot):
+
+    sudo sh -c 'echo on > /sys/devices/platform/msi-ec/cooler_boost'    # echo off to revert
