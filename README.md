@@ -12,3 +12,4 @@ printf '[user]\n\tsigningkey = %s/.ssh/id_ed25519.pub\n' "$HOME" > ~/.config/git
 ```
 
 Machine-specific config lives in untracked files (e.g. `~/.config/git/local`).
+Per-machine backups that are applied by hand (system config, tuned profiles) live in `~/.hosts/<machine>/`.
