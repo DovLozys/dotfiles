@@ -1,3 +1,4 @@
 [tools]
 node = "24"
+rust = "stable"
 terraform = "1.14.4"
