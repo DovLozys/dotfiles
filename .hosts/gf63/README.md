@@ -5,8 +5,8 @@ Machine-specific backups. Nothing here is sourced automatically; apply by hand a
 ## tuned: balanced-cool
 
 Cooler CPU profile for the MSI GF63 12VE (i5-12450H). Fedora `balanced` plus
-a 38 W sustained / 48 W burst RAPL cap. Measured 2026-08-29 under
-3-min all-core load: stock 3.5 GHz / 58 W / 97 °C (throttling) → 2.9 GHz / 38 W / 86 °C flat.
+a 3.5 GHz core ceiling and a 38 W sustained / 48 W burst RAPL cap. Measured 2026-08-29 under
+3-min all-core load: stock 3.5 GHz / 58 W / 97 °C (throttling) → 2.9 GHz / 38 W / 86 °C flat. In game (GW2 + RTX 4050): 89-95 °C → 84-85 °C.
 
     sudo ~/.hosts/gf63/tuned/install.sh
 
